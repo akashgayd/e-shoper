@@ -3,7 +3,7 @@ import ProductCard from '../componant/productCard';
 import axios from 'axios';
 import loder from '../assets/ZKZg.gif';
 
-const ProductList = () => {
+const AllProduct = () => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -58,4 +58,4 @@ const ProductList = () => {
     );
 };
 
-export default ProductList;
+export default AllProduct;

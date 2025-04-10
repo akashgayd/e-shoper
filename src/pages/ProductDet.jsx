@@ -179,7 +179,7 @@ const ProductDetail = () => {
 
                         <button
                             onClick={handleAddToCart}
-                            className="w-full bg-red-400 text-white py-3 rounded-md font-semibold transition-colors duration-300 flex items-center justify-center" //Updated Color
+                            className="w-full bg-red-400 cursor-pointer text-white py-3 rounded-md font-semibold transition-colors duration-300 flex items-center justify-center" //Updated Color
                         >
                             Add to Cart <ShoppingCart className="ml-2" />
                         </button>

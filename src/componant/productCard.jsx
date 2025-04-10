@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../contextApi/ApiContext';
 import { CiShoppingCart } from "react-icons/ci";
 
-const ProductCard = ({ product }) => {
+const ProductItem = ({ product }) => {
   const { addToCart } = useCart();
 
   const handleAddToCart = (e) => {
@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
     addToCart(product);
   };
 
-  // Simplified Discount Calculation
+  
   const discountPercentage = product.discountPercentage || 0; // Handle cases where discountPercentage is missing
   const discountedPrice = product.price * (1 - discountPercentage / 100);
 
@@ -73,4 +73,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default ProductCard;
+export default ProductItem;

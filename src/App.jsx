@@ -1,8 +1,8 @@
 
 import React from 'react';
-import { Router, Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import Navbar from './componant/header';
-import ProductList from './pages/AllProduct';
+import AllProduct from './pages/AllProduct';
 import ProductDetail from './pages/ProductDet';
 import Cart from './pages/cart';
 
@@ -16,8 +16,8 @@ function App() {
           <Navbar />
           <div className="container mx-auto px-4 py-8">
             <Routes>
-              <Route path="/" element={<ProductList />} />
-              <Route path="/products" element={<ProductList />} />
+              <Route path="/" element={<AllProduct />} />
+              
               <Route path="/products/:id" element={<ProductDetail />} />
               <Route path="/cart" element={<Cart />} />
             </Routes>
