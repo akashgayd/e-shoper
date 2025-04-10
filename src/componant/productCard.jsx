@@ -4,12 +4,12 @@ import { useCart } from '../contextApi/ApiContext';
 import { CiShoppingCart } from "react-icons/ci";
 
 const ProductItem = ({ product }) => {
-  const { addToCart } = useCart();
+  const { NewAddCard } = useCart();
 
   const handleAddToCart = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    addToCart(product);
+    NewAddCard(product);
   };
 
   

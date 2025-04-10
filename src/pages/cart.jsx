@@ -4,7 +4,7 @@ import { useCart } from '../contextApi/ApiContext';
 import { Trash2, ShoppingBag } from 'lucide-react';
 
 const Cart = () => {
-  const { cart, removeFromCart, updateQuantity, getCartTotal } = useCart();
+  const { cart, ItemRemove, updateQuantity, getCartTotal } = useCart();
   
   const total = getCartTotal();
   const shipping = 10; 
@@ -74,7 +74,7 @@ const Cart = () => {
                       ${(item.price * item.quantity).toFixed(2)}
                     </span>
                     <button 
-                      onClick={() => removeFromCart(item.id)}
+                      onClick={() => ItemRemove(item.id)}
                       className="text-red-600"
                      
                     >

@@ -4,7 +4,7 @@ import { useCart } from '../contextApi/ApiContext';
 import { ShoppingCart, Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  const { getCartItemsCount } = useCart();
+  const { IncressQuantity } = useCart();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -42,9 +42,9 @@ const Navbar = () => {
               aria-label="View Cart"
             >
               <ShoppingCart className="h-5 w-5" />
-              {getCartItemsCount() > 0 && (
+              {IncressQuantity() > 0 && (
                 <span className="ml-1 bg-red-500 text-white rounded-full px-2 py-0.5 text-xs font-medium">
-                  {getCartItemsCount()}
+                  {IncressQuantity()}
                 </span>
               )}
             </Link>
@@ -70,9 +70,9 @@ const Navbar = () => {
               >
                 <ShoppingCart className="h-5 w-5 mr-2" />
                 <span>Cart</span>
-                {getCartItemsCount() > 0 && (
+                {IncressQuantity() > 0 && (
                   <span className="ml-2 bg-red-500 text-white rounded-full px-2 py-0.5 text-xs font-medium">
-                    {getCartItemsCount()}
+                    {IncressQuantity()}
                   </span>
                 )}
               </Link>
